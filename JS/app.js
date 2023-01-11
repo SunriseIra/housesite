@@ -93,6 +93,8 @@ let popupLink = document.querySelectorAll(".popup-link");
 let closePopup = document.querySelector(".popup_close");
 let popup = document.querySelector(".popup");
 let popupBody = document.querySelector(".popup_body");
+let videoElem = document.querySelector(".video-container video");
+
 
 if (popupLink.length > 0) {
   for (let i = 0; i < popupLink.length; i++) {
@@ -106,11 +108,29 @@ if (popupLink.length > 0) {
 
 closePopup.addEventListener("click", (e) => {
   e.preventDefault();
+  videoElem.pause();
+  videoElem.currentTime = 0;
   popup.classList.remove("active");
 });
 
 popup.addEventListener("click", (e) => {
   if (!e.target.closest(".popup_content")) {
+    videoElem.pause();
+  videoElem.currentTime = 0;
     popup.classList.remove("active");
   }
 });
+
+
+
+// function toggle() {
+//   trailerElem.classList.add("active");
+//   videoElem.play();
+//   videoElem.currentTime = 0;
+// }
+
+// function close() {
+//   trailerElem.classList.remove("active");
+//   videoElem.pause();
+//   videoElem.currentTime = 0;
+// }
