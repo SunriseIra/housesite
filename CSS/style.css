@@ -283,9 +283,10 @@ p {
   flex-direction: row;
   align-items: center;
   display: flex;
-  height: 100px;
-  padding: 0% 4% 0% 2%;
-  gap: 15px;
+  height: 104px;
+  /* padding: 0% 10% 0% 7%; */
+  padding: 2px 12px;
+  gap: 18px;
   max-width: 100%;
   background-color: #fff;
   box-shadow: 0px 11px 48px rgba(51, 51, 51, 0.06);
@@ -304,6 +305,9 @@ p {
 }
 .foto_slider_inner_img_sm {
   width: 40%;
+}
+.foto_slider_inner_img_smo {
+  width: 29%;
 }
 .foto_slider_inner_title_all_b {
   width: 60%;
@@ -335,8 +339,9 @@ p {
 }
 
 .slider_inner_image_b {
-  margin-left: -20px;
-  height: 100px;
+  /* margin-left: -20px; */
+  height: 60px;
+  width: 112px;
 }
 .slider_inner_image {
   margin-left: 10px;
@@ -483,7 +488,7 @@ p {
   position: absolute;
   width: 60px;
   height: 52px;
-  left: 1260px;
+  left: 1250px;
   top: 819px;
   background: #e0e3eb;
   border-radius: 32px;
@@ -644,7 +649,7 @@ p {
 }
 
 .readytoSell_first_colon_details_all {
-  width: 75%;
+  width: 80%;
 }
 .colon_details_first_elem {
   display: flex;
@@ -763,6 +768,9 @@ p {
   left: 454px;
   top: 379px;
 }
+.colon_details_seller_phpne {
+  display: flex;
+}
 .colon_details_seller_but {
   display: flex;
   flex-direction: row;
@@ -770,7 +778,7 @@ p {
   background: #10b981;
   border-radius: 32px;
   border: none;
-  padding: 3% 7%;
+  padding: 3% 15%;
   gap: 16px;
   font-weight: 600;
   font-size: 14px;
@@ -830,4 +838,168 @@ p {
 /* video */
 .question_section_video {
   width: 800px;
+}
+
+/* seeourReview */
+.seeourReview {
+  padding: 60px 0;
+}
+.review_title_all {
+  text-align: center;
+}
+.review_title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: capitalize;
+  color: #f59e0b;
+  /* padding-left: 15px; */
+}
+.review_title:before {
+  background-color: #f59e0b;
+  content: "";
+  width: 32px;
+  height: 1px;
+  margin-top: -8px;
+  position: absolute;
+  left: 49.1%;
+  transform: translateX(-15%);
+  display: block;
+}
+.review_title_big_text {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #1b1c57;
+}
+/* review_slider */
+.review_slider_img_img {
+  width: 740px;
+  height: 400px;
+}
+.review_slider {
+  padding-top: 40px;
+  margin: auto;
+  /* padding: 30px; */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.slick-slide.review_slider_image.slick-current {
+  width: 740px;
+  height: 505px;
+}
+.slick-initialized.slick-slide {
+  width: 740px;
+}
+
+.review_slider_image {
+  margin: 10px 28px;
+}
+.review_slider_img_img {
+  position: relative;
+}
+.review_slider_review {
+  position: relative;
+  width: 612px;
+  height: 249px;
+  margin-top: -144px;
+  margin-left: 64px;
+  z-index: 100;
+  background: #ffffff;
+  box-shadow: 0px 9px 32px rgba(89, 92, 219, 0.05);
+  border-radius: 16px;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+.review_slider_review_title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  text-transform: capitalize;
+  color: #1b1c57;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.review_slider_review_text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #626687;
+  opacity: 0.75;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  padding-top: 16px;
+}
+.review_slider_review_seller_foto {
+  width: 7%;
+}
+.review_slider_review_seller_foto_img {
+  width: 40px;
+  height: 40px;
+}
+.review_slider_review_seller {
+  display: flex;
+  padding-top: 24px;
+}
+.review_slider_review_seller_name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: #0e1735;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.review_slider_review_seller_dan {
+  padding-left: 24px;
+  width: 74%;
+}
+.review_slider_review_seller_position {
+  padding-top: 4px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: #888b97;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.review_slider_review_seller_star {
+  padding-right: 18px;
+}
+.review_slider_review_seller_star_number {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #3c4563;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* partnership */
+.partnership {
+  padding: 60px 0;
+}
+.partnership_title_big_text {
+  /* width:422px; */
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #1b1c57;
+  padding: 10px 35%;
 }
