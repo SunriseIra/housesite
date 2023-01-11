@@ -32,6 +32,35 @@ $(document).ready(function () {
       $(".slick_carousel").slick("slickUnfilter");
     }
   });
+
+  $(".review_slider").slick({
+    centerMode: true,
+    infinite: true,
+    arrows: false,
+    dots: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    variableWidth: true,
+    speed: 500,
+    responsive: [
+      {
+        breakpoint: 500,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
 });
 
 let butHouse = document.querySelectorAll(".button_filter_vil");
