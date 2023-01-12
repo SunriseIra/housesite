@@ -1156,3 +1156,121 @@ p {
   flex-grow: 0;
   padding-top: 12px;
 }
+
+/* subscribe */
+
+.subscribesect {
+  padding: 60px 120px;
+}
+.subscribe_inner_fon {
+  position: relative;
+  z-index: 1;
+  width: 1200px;
+  height: 312px;
+}
+.subscribe_inner_fon_img {
+  position: absolute;
+}
+.subscribe_inner_fon_text {
+  position: relative;
+  z-index: 20;
+  padding: 60px 380px 40px 380px;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #1b1c57;
+}
+.sectsubscribe {
+  width: 100%;
+  max-width: 495px;
+  padding: 0.5% 0.2%;
+  display: flex;
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e0e3eb;
+  border-radius: 32px;
+  color: #ccc;
+  justify-content: center;
+  align-items: center;
+}
+.subscribesect_input_img {
+  border-style: none;
+  width: 20px;
+  height: 16px;
+  padding: 5px 20px;
+}
+.subscribesect_input {
+  width: 60%;
+  font-size: 15px;
+  line-height: 1.1;
+  border-style: none;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.subscribesect_btn {
+  width: 26%;
+  padding: 1% 1%;
+  height: 46px;
+  background-color: #10b981;
+  border-radius: 32px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-style: none;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: #ffffff;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.subscribe_btn_img {
+  padding-left: 5px;
+}
+.sectsubscribe_form {
+  padding: 0% 29%;
+}
+.subscribe_inner_fon_imga {
+  position: absolute;
+  width: 81px;
+  top: 44px;
+  left: 44px;
+}
+.subscribe_inner_fon_imgas {
+  position: absolute;
+  top: 175px;
+  left: 195px;
+}
+.subscribe_inner_fon_imag {
+  position: absolute;
+  top: 50px;
+  left: 930px;
+}
+.subscribe_inner_fon_images {
+  position: absolute;
+  top: 67px;
+  left: 204px;
+}
+.subscribe_inner_fon_imagess {
+  position: absolute;
+  top: 170px;
+  left: 67px;
+}
+.subscribe_inner_fon_imagees {
+  position: absolute;
+  top: 190px;
+  left: 1072px;
+}
+.subscribe_inner_fon_imaagees {
+  position: absolute;
+  top: 110px;
+  left: 1072px;
+}
+.subscribe_inner_fon_imaages {
+  position: absolute;
+  top: 150px;
+  left: 964px;
+}
