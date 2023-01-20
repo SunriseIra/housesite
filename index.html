@@ -26,6 +26,7 @@
   <body>
     <header class="header_house">
       <div class="header_page_fon"></div>
+      <div class="header_page_fon2"></div>
       <div class="header_inner">
         <div class="header_logo">
           <img class="header_logo_img" src="./images/logo.png" alt="" />
@@ -77,7 +78,6 @@
 
             <div class="colon_first_partner">Our Partnership</div>
             <div class="colon_first_partner_all">
-              <div></div>
               <img
                 class="all_partner"
                 src="./images/traveloka_logo 2.png"
@@ -168,45 +168,45 @@
 
         <div class="filter_button">
           <div class="filter_button_title">Featured House</div>
-          <div class="button_filters filter">
-            <button
-              class="button_filter button_filter_vil activeS"
-              data-filter="house">
-              <img
-                src="./images/houseBig.png"
-                alt=""
-                class="button_filter_img" />
-              House
-            </button>
-            <button class="button_filter_vil" data-filter="villa">
-              <img
-                src="./images/Vector3.png"
-                alt=""
-                class="button_filter_img" />
-              Villa
-            </button>
-            <button class="button_filter_vil" data-filter="apartment">
-              <img
-                src="./images/Vector4.png"
-                alt=""
-                class="button_filter_img" />
-              Apartment
-            </button>
-          </div>
+          <div class="button_filters_all">
+            <div class="button_filters filter">
+              <button class="button_filter_vil activeS" data-filter="house">
+                <img
+                  src="./images/houseBig.png"
+                  alt=""
+                  class="button_filter_img" />
+                House
+              </button>
+              <button class="button_filter_vil" data-filter="villa">
+                <img
+                  src="./images/Vector3.png"
+                  alt=""
+                  class="button_filter_img" />
+                Villa
+              </button>
+              <button class="button_filter_vil" data-filter="apartment">
+                <img
+                  src="./images/Vector4.png"
+                  alt=""
+                  class="button_filter_img" />
+                Apartment
+              </button>
+            </div>
 
-          <div class="slick_arrows">
-            <button
-              class="slick_prev_arrow slick-arrow"
-              aria-label="Previous"
-              type="button">
-              <img class="next_arrow" src="./images/prev_arrow.png" alt="" />
-            </button>
-            <button
-              class="arrowActive slick_next_arrow slick-arrow"
-              aria-label="Next"
-              type="button">
-              <img class="next_arrow" src="./images/prev_arrow.png" alt="" />
-            </button>
+            <div class="slick_arrows">
+              <button
+                class="slick_prev_arrow slick-arrow"
+                aria-label="Previous"
+                type="button">
+                <img class="next_arrow" src="./images/prev_arrow.png" alt="" />
+              </button>
+              <button
+                class="arrowActive slick_next_arrow slick-arrow"
+                aria-label="Next"
+                type="button">
+                <img class="next_arrow" src="./images/prev_arrow.png" alt="" />
+              </button>
+            </div>
           </div>
         </div>
         <div class="slick_carousel_filtering">
@@ -222,7 +222,7 @@
                     class="button_popular_img"
                     src="./images/fire1.png"
                     alt="" />
-                  Popular
+                  <div class="button_popular_text">Popular</div>
                 </button>
               </div>
               <div class="slider_item_inner">
@@ -306,7 +306,7 @@
             </div>
             <div class="slider_item house apartment">
               <img
-                class="slider_item_image slider_item_big"
+                class="slider_item_image"
                 src="images/Rectangle 21.png"
                 alt="" />
               <div class="popular_button">
@@ -455,14 +455,17 @@
                 </div>
               </div>
               <div class="colon_details_seller">
-                <img
-                  class="slider_item_seller_img"
-                  src="./images/Ellipse 6.png"
-                  alt="" />
-                <div class="slider_item_seller_all">
-                  <div class="colon_details_name">Dianne Russell</div>
-                  <div class="colon_details_prof">Manager Director</div>
+                <div class="colon_details_seller_all">
+                  <img
+                    class="slider_item_seller_img"
+                    src="./images/Ellipse 6.png"
+                    alt="" />
+                  <div class="slider_item_seller_all">
+                    <div class="colon_details_name">Dianne Russell</div>
+                    <div class="colon_details_prof">Manager Director</div>
+                  </div>
                 </div>
+
                 <div class="colon_details_seller_phpne">
                   <a class="colon_details_seller_but" href="tel:+671 555-0110">
                     <img
@@ -533,7 +536,6 @@
 
     <section class="seeourReview">
       <div class="review_title_all">
-        <div class="review_title_rectangl"></div>
         <div class="review_title">See Our Review</div>
         <div class="review_title_big_text">What Our User Say About Us</div>
       </div>
@@ -707,9 +709,11 @@
       <div class="review_title_all">
         <div class="review_title_rectangl"></div>
         <div class="review_title">See tips and trick from our partnership</div>
-        <div class="partnership_title_big_text">
-          Find out more about selling and buying homes
-        </div>
+        <h1 class="partnership_title_big_text">
+          Find out more about
+          <br />
+          selling and buying homes
+        </h1>
         <div class="partnership_inner_fon">
           <img
             src="./images/Vector5.png"
@@ -935,7 +939,7 @@
             class="footer_inner_fon_image" />
         </div>
         <div class="footer_inner_colon_all">
-          <div class="footer_inner_colon_first">
+          <div class="footer_inner_colon_first footer_inner_w">
             <div class="footer_inner_colon_first_title">
               <div class="footer_logo">
                 <img class="header_logo_img" src="./images/logo.png" alt="" />
@@ -945,38 +949,32 @@
                 We provide information about properties such as houses, villas
                 and apartments to help people find their dream home
               </div>
-              <div class="footer_inner_colon_first_inform">
-                <img
-                  src="./images/facebook.png"
-                  alt=""
-                  class="first_inform_f" />
-                <img src="./images/twitter.png" alt="" class="first_inform_f" />
-                <img
-                  src="./images/instagram.png"
-                  alt=""
-                  class="first_inform_f" />
-              </div>
             </div>
           </div>
-          <div class="footer_inner_colon_second">
+          <div class="footer_inner_colon_second footer_inner_w">
             <div class="footer_inner_colon_title">Property</div>
             <a class="colon_text" href="#">House</a>
             <a class="colon_text" href="#">Apartment</a>
             <a class="colon_text" href="#">Villa</a>
           </div>
-          <div class="footer_inner_colon_third">
+          <div class="footer_inner_colon_third footer_inner_w">
             <div class="footer_inner_colon_title">Article</div>
             <a class="footer_text" href="#">New Article</a>
             <a class="footer_text" href="#">Popular Article</a>
             <a class="footer_text" href="#">Most Read</a>
             <a class="footer_text" href="#">Tips & Tricks</a>
           </div>
-          <div class="footer_inner_colon_fourth">
+          <div class="footer_inner_colon_fourth footer_inner_w">
             <div class="footer_inner_colon_title">Contact</div>
             <a class="footer_text">2464 Royal Ln. Mesa, New Jersey 45463</a>
             <a class="footer_text" href="tel:+671 555-0110">(671) 555-0110</a>
             <a class="footer_text" href="info@hounter.com">info@hounter.com</a>
           </div>
+        </div>
+        <div class="footer_inner_colon_first_inform">
+          <img src="./images/facebook.png" alt="" class="first_inform_f" />
+          <img src="./images/twitter.png" alt="" class="first_inform_f" />
+          <img src="./images/instagram.png" alt="" class="first_inform_f" />
         </div>
       </div>
     </section>

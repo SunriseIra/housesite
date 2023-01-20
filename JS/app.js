@@ -59,6 +59,14 @@ $(document).ready(function () {
           slidesToShow: 1,
         },
       },
+      {
+        breakpoint: 410,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          slidesToShow: 1,
+        },
+      },
     ],
   });
 });
@@ -95,7 +103,6 @@ let popup = document.querySelector(".popup");
 let popupBody = document.querySelector(".popup_body");
 let videoElem = document.querySelector(".video-container video");
 
-
 if (popupLink.length > 0) {
   for (let i = 0; i < popupLink.length; i++) {
     let popupLinks = popupLink[i];
@@ -116,12 +123,10 @@ closePopup.addEventListener("click", (e) => {
 popup.addEventListener("click", (e) => {
   if (!e.target.closest(".popup_content")) {
     videoElem.pause();
-  videoElem.currentTime = 0;
+    videoElem.currentTime = 0;
     popup.classList.remove("active");
   }
 });
-
-
 
 // function toggle() {
 //   trailerElem.classList.add("active");
