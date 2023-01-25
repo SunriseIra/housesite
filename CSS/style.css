@@ -821,7 +821,7 @@ p {
   overflow-x: hidden;
   overflow-y: auto;
 }
-.popup.active {
+.popup.activePop {
   visibility: visible;
   opacity: 1;
 }
@@ -1298,13 +1298,13 @@ p {
   display: none;
 }
 .activeRed {
-  color:#e7110a
+  color: #e7110a;
 }
 
 /* footer */
 
 .footer {
-  padding: 60px 120px 120px 120px;
+  padding: 80px 120px 120px 120px;
   position: relative;
 }
 
@@ -1412,6 +1412,10 @@ p {
   }
   .subscribe_inner_fon_text {
     padding: 5% 28% 3% 28%;
+  }
+  .footer {
+    padding: 60px 120px 120px 120px;
+    position: relative;
   }
 }
 
