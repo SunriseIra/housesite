@@ -134,7 +134,7 @@ if (popupLink.length > 0) {
     let popupLinks = popupLink[i];
     popupLinks.addEventListener("click", (e) => {
       e.preventDefault();
-      popup.classList.add("active");
+      popup.classList.add("activePop");
     });
   }
 }
@@ -143,14 +143,14 @@ closePopup.addEventListener("click", (e) => {
   e.preventDefault();
   videoElem.pause();
   videoElem.currentTime = 0;
-  popup.classList.remove("active");
+  popup.classList.remove("activePop");
 });
 
 popup.addEventListener("click", (e) => {
   if (!e.target.closest(".popup_content")) {
     videoElem.pause();
     videoElem.currentTime = 0;
-    popup.classList.remove("active");
+    popup.classList.remove("activePop");
   }
 });
 
@@ -170,6 +170,8 @@ form.addEventListener("submit", function (e) {
     localStorage.setItem("email", JSON.stringify(emailInput.value));
     form.reset();
     emailInput.classList.add("activeRed");
+    form.classList.add("active");
+    savedmail.textContent = "Your email sent!";
   }
 });
 
@@ -193,10 +195,8 @@ function validate(regex, elem) {
 let StorEmail = localStorage.getItem("email");
 
 if (StorEmail !== null) {
-
   form.classList.add("active");
   savedmail.textContent = "Your email has been saved!";
 } else {
   form.classList.remove("active");
 }
-
