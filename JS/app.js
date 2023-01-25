@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // findetheplace_foto_slider
   $(".findetheplace_foto_slider").slick({
     arrows: true,
     slidesToScroll: 1,
@@ -9,16 +10,39 @@ $(document).ready(function () {
     variableWidth: true,
   });
 
+  // slick_carousel_filtering
   $(".slick_carousel").slick({
     infinite: false,
     speed: 50,
     arrows: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    prevArrow: ".slick_prev_arrow.slick-arrow",
-    nextArrow: ".slick_next_arrow.slick-arrow",
+    prevArrow: ".slick_prev_arrow",
+    nextArrow: ".slick_next_arrow",
+    responsive: [
+      {
+        breakpoint: 770,
+        settings: {
+          arrows: true,
+          prevArrow: ".slick_prev_arrow",
+          nextArrow: ".slick_next_arrow",
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: true,
+          prevArrow: ".slick_prev_arrow",
+          nextArrow: ".slick_next_arrow",
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   });
-
+  // slick_carousel_filtering filter
   $(".filter button").on("click", function () {
     var filter = $(this).data("filter");
 
@@ -33,6 +57,7 @@ $(document).ready(function () {
     }
   });
 
+  // review_slider_inner
   $(".review_slider").slick({
     centerMode: true,
     infinite: true,
@@ -71,12 +96,11 @@ $(document).ready(function () {
   });
 });
 
+// slick_carousel_filtering filter button_filter
 let butHouse = document.querySelectorAll(".button_filter_vil");
 let buttonHouse = Array.from(butHouse);
-// console.log(buttonHouse);
 buttonHouse.forEach((elem) => {
   elem.addEventListener("click", function () {
-    // console.log(elem);
     buttonHouse.forEach((elem) => {
       elem.classList.remove("activeS");
     });
@@ -84,11 +108,13 @@ buttonHouse.forEach((elem) => {
   });
 });
 
+// slick-arrow
 let sarrow = document.querySelectorAll(".slick-arrow");
 let arrow = Array.from(sarrow);
 
 arrow.forEach((elem) => {
   elem.addEventListener("click", function () {
+    console.log(elem);
     arrow.forEach((elem) => {
       elem.classList.remove("arrowActive");
     });
@@ -96,7 +122,7 @@ arrow.forEach((elem) => {
   });
 });
 
-///pop up
+///pop up +  video pause
 let popupLink = document.querySelectorAll(".popup-link");
 let closePopup = document.querySelector(".popup_close");
 let popup = document.querySelector(".popup");
@@ -128,14 +154,49 @@ popup.addEventListener("click", (e) => {
   }
 });
 
-// function toggle() {
-//   trailerElem.classList.add("active");
-//   videoElem.play();
-//   videoElem.currentTime = 0;
-// }
+// / Stop the form from submitting when a button is pressed
+let form = document.querySelector(".sectsubscribe");
+let emailInput = document.querySelector(".subscribesect_input");
+let submitBtn = document.querySelector(".subscribesect_btn");
+let savedmail = document.querySelector(".sectsubscribe_form");
 
-// function close() {
-//   trailerElem.classList.remove("active");
-//   videoElem.pause();
-//   videoElem.currentTime = 0;
-// }
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  let err = validateInput();
+
+  if (err == 0) {
+    console.log("Your email has been saved");
+    localStorage.setItem("email", JSON.stringify(emailInput.value));
+    form.reset();
+    emailInput.classList.add("activeRed");
+  }
+});
+
+function validateInput() {
+  let regEmail =
+    /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
+  return validate(regEmail, emailInput);
+}
+
+function validate(regex, elem) {
+  let i = 0;
+  if (regex.test(elem.value)) {
+    emailInput.classList.remove("activeRed");
+  } else {
+    emailInput.classList.add("activeRed");
+    i++;
+  }
+  return i;
+}
+
+let StorEmail = localStorage.getItem("email");
+
+if (StorEmail !== null) {
+
+  form.classList.add("active");
+  savedmail.textContent = "Your email has been saved!";
+} else {
+  form.classList.remove("active");
+}
+
